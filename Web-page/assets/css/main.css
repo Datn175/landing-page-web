@@ -17,4 +17,131 @@ body {
     --white-Color: #fff;
     --color-Heading:#2E2E2E;
     --color-Text:#808080;
+    --color-Background:#E6E6E6;
+}
+
+/* font -Poppins */
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+    font-weight:400;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+    font-weight:500;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+    font-weight:700;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,p {
+    font-family: "Poppins";
+    text-transform: capitalize;
+}
+/* header */
+header {
+    background-image: url(../folder-img/img/Rectangle\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    object-position: 50%;
+    max-width: 100%;
+    /* min-height: 100vh; */
+    padding: 1.4rem;
+}
+
+.navbar .menu {
+    gap: 2.2rem;
+}
+
+.menu li > a {
+    color: var(--color-Heading);
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn button {
+    width: 9.4rem;
+    padding: 1.4rem;
+    border: 1px solid var(--primary-Color);
+    color: var(--white-Color);
+    background-color: var(--primary-Color);
+    border-radius: 1.2rem;
+    cursor: pointer;
+}
+
+
+h1.heading__header {
+    font-size: 3.2rem;
+    max-width: calc(100% - 36%);
+    line-height: 1.4;
+    margin-top: 6.2rem;
+    font-weight: 700;
+}
+
+p.text__heading {
+    max-width: calc(100% / 2);
+    line-height: 2;
+    font-weight: 400;
+    margin-bottom: 2.2rem;
+}
+
+.push__email {
+    max-width: 100%;
+    width: calc(100% - 10%);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.push__email input[type="email"] {
+    width: calc(100% - 70%);
+    padding: 2.2rem 2.4rem;
+    background-color: var(--white-Color);
+    outline: solid transparent;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+}
+
+.push__email > button[type="submit"] {
+    width: 9.4rem;
+    padding: 1.4rem;
+    border: 1px solid var(--primary-Color);
+    color: var(--white-Color);
+    background-color: var(--primary-Color);
+    border-radius: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 12%;
+    left: 21%;
+}
+
+#group01 .heading__group,.text__group01 {
+    text-align: center;
+    line-height: 2;
+}
+
+.heading__group {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.text__group01 {
+    font-size: 1.4rem;
+    max-width: calc(100% / 2);
+    margin: 30px auto;
 }
