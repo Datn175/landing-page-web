@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+:root {
+    --primary-Color:#F84646;
+    --white-Color: #fff;
+    --color-Heading:#2E2E2E;
+    --color-Text:#808080;
+}
