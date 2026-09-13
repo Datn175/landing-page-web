@@ -70,7 +70,7 @@
 }
 
 [class^="col-"] {
-    --column-Width:calc(100 / var(--max-Column) * var(--column-Number));
+    --column-Width:calc(100% / var(--max-Column) * var(--column-Number));
     flex-basis: var(--column-Width);
     max-width: var(--column-Width);
     padding: 0 calc(var(--space-Column)/ 2);
