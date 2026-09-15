@@ -145,3 +145,11 @@ p.text__heading {
     max-width: calc(100% / 2);
     margin: 30px auto;
 }
+/*  */
+
+
+#text__products {
+    width: 50%;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
