@@ -243,7 +243,7 @@
 }
 /* end gutter */
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576.98px) {
     .col-sm-1 {
     --column-Number:1;
 }
@@ -293,7 +293,7 @@
 }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 767.98px) {
     .col-md-1 {
     --column-Number:1;
 }
@@ -343,7 +343,7 @@
 }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992.98px) {
     .col-lg-1 {
     --column-Number:1;
 }
@@ -393,7 +393,7 @@
 }
 }
 
-@media screen and (min-width:1280px) {
+@media screen and (min-width:1280.98px) {
     .col-xl-1 {
     --column-Number:1;
 }
