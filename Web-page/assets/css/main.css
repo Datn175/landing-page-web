@@ -60,6 +60,22 @@ header {
     /* min-height: 100vh; */
     padding: 1.4rem;
 }
+/* css burger-menu landing-page basic */
+label[for="burger"]::after {
+    content: "\f0c9";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+label[for="exit"]::after {
+    content: "\f057";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+
+
+/*  */
 
 .navbar .menu {
     gap: 2.4rem;
@@ -221,7 +237,30 @@ p.text__heading {
 }
 
 @media screen and (min-width:576.98px) {
-    
+    .navbar {
+        position: relative;
+    }
+    .navbar .menu {
+        /* display: none; */
+        padding: 4.2rem;
+        position: fixed;
+        z-index: 100;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.8rem;
+        width: 230px;
+        height: 100vh;
+        background-color: var(--white-Color);
+    }
+
+    label[for="exit"]::after {
+        position: absolute;
+        right: 70px;
+        top: -4rem;
+        z-index: 120;
+    }
 }
 
 @media screen and (min-width: 767.98px) {
@@ -233,5 +272,5 @@ p.text__heading {
 }
 
 @media screen and (min-width:1280.98px) {
-    
+
 }
