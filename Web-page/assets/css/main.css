@@ -10,6 +10,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    overflow-x:hidden ;
 }
 
 :root {
@@ -197,6 +198,27 @@ p.text__heading {
     font-size: 1.4rem;
 }
 
+#group02 {
+    background-color: #F84646;
+    max-width: 100%;
+    width: 100%;
+    height: 16em;
+    position: relative;
+}
+
+#group02::after {
+    overflow: hidden;
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../folder-img/img/background__img.svg);
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    opacity: 0;
+    pointer-events: none;
+}
 
 @media screen and (min-width:576.98px) {
     
