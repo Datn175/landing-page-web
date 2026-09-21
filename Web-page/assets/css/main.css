@@ -54,6 +54,7 @@ header {
     background-image: url(../folder-img/img/Rectangle\ 1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     object-fit: cover;
     object-position: 50%;
     max-width: 100%;
@@ -65,20 +66,37 @@ label[for="burger"]::after {
     content: "\f0c9";
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
+    font-size: 2.2rem;
+    cursor: pointer;
+    position: relative;
+    left: -22rem;
 }
 
 label[for="exit"]::after {
     content: "\f057";
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
+    font-size: 2.2rem;
 }
 
+input[name="toogle-menu"],
+input[name="toogle-menu"] {
+    display: none;
+}
 
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: #6d6a6a4b;
+    z-index: 100;
+    display: none;
+}
 
 /*  */
 
 .navbar .menu {
     gap: 2.4rem;
+    max-width: 100%;
 }
 
 .menu li > a {
@@ -237,11 +255,13 @@ p.text__heading {
 }
 
 @media screen and (min-width:576.98px) {
-    .navbar {
-        position: relative;
+    #group02::after {
+        background-position: right;
+        background-size: contain;
     }
+
     .navbar .menu {
-        /* display: none; */
+        opacity: 0;
         padding: 4.2rem;
         position: fixed;
         z-index: 100;
@@ -250,17 +270,43 @@ p.text__heading {
         flex-direction: column;
         align-items: center;
         gap: 2.8rem;
-        width: 230px;
+        width: 24rem;
         height: 100vh;
+        border-radius: 1.4rem;
         background-color: var(--white-Color);
+        transform: translateX(25rem);
+        transition: all .3s ease-in-out;
     }
 
     label[for="exit"]::after {
-        position: absolute;
-        right: 70px;
-        top: -4rem;
+        position: fixed;
+        right: 20rem;
+        top: 2.2rem;
         z-index: 120;
+        opacity: 0;
+        cursor: pointer;
     }
+
+    input[id="burger"]:checked ~ .menu,
+    input[id="burger"]:checked ~ label[for="exit"]::after {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.3s linear;
+    }
+
+    input[id="burger"]:checked ~ .overlay {
+        display: block;
+    }
+
+    .charter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    
 }
 
 @media screen and (min-width: 767.98px) {
