@@ -54,7 +54,8 @@ header {
     background-image: url(../folder-img/img/Rectangle\ 1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top, center;
+    opacity: 0.9;
     object-fit: cover;
     object-position: 50%;
     max-width: 100%;
@@ -211,25 +212,66 @@ p.text__heading {
     font-weight: 700;
 }
 
-.icon-products i {
-    font-size: 3.8rem;
-    line-height: 2;
+.icon-products {
     position: relative;
 }
 
+.icon-products i {
+    font-size: 3.8rem;
+    line-height: 2;
+}
+
 .icon-products::after {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.4rem;
+    height: 2.4rem;
     line-height: 1.6;
     border-radius: 50%;
     content: "";
     display: inline-block;
     position: absolute;
+    left: 2.5rem;
+    top: 1.4rem;
+    opacity: 0.8;
     z-index: 50;
 }
 
+.products:nth-of-type(1) .icon-products::after {
+    background-color: #FF5391;
+}
 
+.products:nth-of-type(3) .icon-products::after {
+    background-color: #53C1FF;
+}
 
+.products:nth-of-type(5) .icon-products::after {
+    background-color: #FF5353;
+}
+
+.products:nth-of-type(2) .icon-products::before {
+    background-color: #7553FF;
+}
+
+.products:nth-of-type(4) .icon-products::before {
+    background-color: #53ACFF;
+}
+
+.products:nth-of-type(6) .icon-products::before {
+    background-color: #FFBA53;
+}
+
+.icon-products::before {
+    width: 2.4rem;
+    height: 2.4rem;
+    line-height: 1.6;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    opacity: 0.8;
+    z-index: 50;
+}
 
 #text__products {
     width: 50%;
@@ -241,7 +283,7 @@ p.text__heading {
     background-color: #F84646;
     max-width: 100%;
     width: 100%;
-    height: 16em;
+    height: 20em;
     position: relative;
 }
 
@@ -250,23 +292,36 @@ p.text__heading {
     content: "";
     display: inline-block;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:center;
     background-image: url(../folder-img/img/background__img.svg);
     position: absolute;
     inset: 0;
     z-index: 50;
-    opacity: 0;
+    opacity: 1;
     pointer-events: none;
+    mix-blend-mode: soft-light;
+}
+
+
+.heading__group02 {
+    text-align: center;
+    line-height: 1.6;
+    color: var(--white-Color);
+}
+
+.heading__group02 h2 {
+    font-size: 3.2rem;
+}
+
+.heading__group02 p {
+    font-size: 1.2rem;
 }
 
 @media screen and (max-width:576.98px) {
-    
-
-    #group02::after {
-        background-position: right;
-        background-size: contain;
-    }
-
+    body:has(#burger:checked) {
+    overflow: hidden;
+    height: 100%;
+} /* đoạn này nhờ ai làm hộ*/
     .navbar .menu {
         opacity: 0;
         padding: 4.2rem;
@@ -282,7 +337,7 @@ p.text__heading {
         border-radius: 1.4rem;
         box-shadow: -6px 9px 26px 1px rgba(0, 0, 0, 0.48);
 -webkit-box-shadow: -6px 9px 26px 1px rgba(0, 0, 0, 0.48);
-        background-color: var(--white-Color);
+        background: linear-gradient(135deg, var(--primary-Color) 0%, var(--white-Color) 100%);
         transform: translateX(25rem);
         transition: all .3s ease-in-out;
     }
@@ -327,6 +382,11 @@ p.text__heading {
     .push__email button[type="submit"] {
         position: absolute;
         left: 70%;
+    }
+
+    #group02::after {
+        background-position: right;
+        background-size: cover;
     }
 }
 
