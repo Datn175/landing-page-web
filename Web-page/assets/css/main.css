@@ -115,16 +115,29 @@ label[for="burger"]::after {
     user-select: none;
 }
 
+.menu li > a:hover {
+    color: var(--primary-Color);
+    transition: all .2s ease-in-out;
+}
+
 .btn button {
-    width: 9.4rem;
-    padding: 1.4rem;
-    border: 1px solid var(--primary-Color);
-    color: var(--white-Color);
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
     background-color: var(--primary-Color);
-    border-radius: 1.2rem;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
     cursor: pointer;
 }
 
+.btn button:hover,
+.btn button:active {
+    background-color: var(--primary-Color);
+    opacity: 0.8;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+}
 
 h1.heading__header {
     font-size: 3.2rem;
@@ -160,15 +173,41 @@ p.text__heading {
 
 .push__email > button[type="submit"] {
     width: 9.4rem;
-    padding: 1.4rem;
-    border: 1px solid var(--primary-Color);
-    color: var(--white-Color);
-    background-color: var(--primary-Color);
-    border-radius: 1.2rem;
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(45deg, var(--primary-Color), rgb(235, 59, 20));
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    padding: 0.6em 1.5rem;
     cursor: pointer;
+    outline: none;
     position: absolute;
-    top: 12%;
+    top: 14%;
     left: 21%;
+}
+
+.push__email > button[type="submit"]:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+}
+
+
+@keyframes pulse512 {
+ 0% {
+  box-shadow: 0 0 0 0 var(--primary-Color);
+ }
+
+ 70% {
+  box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+ }
+
+ 100% {
+  box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+ }
 }
 
 #group01 .heading__group,.text__group01 {
@@ -222,14 +261,14 @@ p.text__heading {
 }
 
 .icon-products::after {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 3.2rem;
+    height: 3.2rem;
     line-height: 1.6;
     border-radius: 50%;
     content: "";
     display: inline-block;
     position: absolute;
-    left: 2.5rem;
+    left: 2.4rem;
     top: 1.4rem;
     opacity: 0.8;
     z-index: 50;
@@ -260,8 +299,8 @@ p.text__heading {
 }
 
 .icon-products::before {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 3.2rem;
+    height: 3.2rem;
     line-height: 1.6;
     border-radius: 50%;
     content: "";
@@ -307,6 +346,7 @@ p.text__heading {
     text-align: center;
     line-height: 1.6;
     color: var(--white-Color);
+    margin: 2.6rem 0;
 }
 
 .heading__group02 h2 {
@@ -316,6 +356,38 @@ p.text__heading {
 .heading__group02 p {
     font-size: 1.2rem;
 }
+
+.status p {
+    max-width: 18rem;
+    text-align: left;
+    color: var(--white-Color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1.4;
+    margin-left: 10rem;
+}
+
+.status {
+    position: relative;
+}
+
+#list > .contact-user:nth-child(-n+3) .status::after {
+    content: "\f101";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    display: inline-block;
+    text-align: center;
+    color: var(--white-Color);
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 3px solid var(--white-Color);
+    border-radius: 50%;
+}
+
+
 
 @media screen and (max-width:576.98px) {
     body:has(#burger:checked) {
@@ -388,6 +460,8 @@ p.text__heading {
         background-position: right;
         background-size: cover;
     }
+
+
 }
 
 @media screen and (max-width: 767.98px) {
