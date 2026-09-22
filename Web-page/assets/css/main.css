@@ -84,6 +84,11 @@ input[name="toogle-menu"] {
     display: none;
 }
 
+label[for="exit"]::after,
+label[for="burger"]::after {
+    display: none;
+}
+
 .overlay {
     position: fixed;
     inset: 0;
@@ -254,7 +259,9 @@ p.text__heading {
     pointer-events: none;
 }
 
-@media screen and (min-width:576.98px) {
+@media screen and (max-width:576.98px) {
+    
+
     #group02::after {
         background-position: right;
         background-size: contain;
@@ -273,6 +280,8 @@ p.text__heading {
         width: 24rem;
         height: 100vh;
         border-radius: 1.4rem;
+        box-shadow: -6px 9px 26px 1px rgba(0, 0, 0, 0.48);
+-webkit-box-shadow: -6px 9px 26px 1px rgba(0, 0, 0, 0.48);
         background-color: var(--white-Color);
         transform: translateX(25rem);
         transition: all .3s ease-in-out;
@@ -298,6 +307,11 @@ p.text__heading {
         display: block;
     }
 
+    label[for="exit"]::after,
+    label[for="burger"]::after {
+    display: block;
+    }
+    
     .charter {
         display: flex;
         flex-direction: column;
@@ -306,17 +320,24 @@ p.text__heading {
         text-align: center;
     }
 
+    .push__email input[type="email"] {
+        width: 95%;
+        position: relative;
+    }
+    .push__email button[type="submit"] {
+        position: absolute;
+        left: 70%;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
     
 }
 
-@media screen and (min-width: 767.98px) {
-    
+@media screen and (max-width:992.98px) {
+
 }
 
-@media screen and (min-width:992.98px) {
+@media screen and (max-width:1280.98px) {
     
-}
-
-@media screen and (min-width:1280.98px) {
-
 }
