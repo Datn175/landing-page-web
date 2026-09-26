@@ -10,7 +10,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    overflow-x:hidden ;
+    overflow-x: hidden ;
 }
 
 :root {
@@ -456,12 +456,47 @@ p.text__heading {
         left: 70%;
     }
 
+    #group02 {
+        height: 80vh;
+    }
+
     #group02::after {
         background-position: right;
         background-size: cover;
     }
 
+    #list {
+        display: flex;
+        flex-direction: column;
+        gap: 4.4rem;
+    }
 
+    .contact-user {
+        padding: 1.2rem;
+    }
+
+    .status p {
+        margin-left: 3rem;
+    }
+
+    #list > .contact-user:nth-child(-n+3) .status::after {
+    content: "\f101";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    display: inline-block;
+    text-align: center;
+    color: var(--white-Color);
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 3px solid var(--white-Color);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -4.8rem;
+    left: 8.2rem;
+    transform: rotate(90deg);
+}
 }
 
 @media screen and (max-width: 767.98px) {
