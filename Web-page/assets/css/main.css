@@ -48,6 +48,7 @@ a {
 h1,h2,h3,p {
     font-family: "Poppins";
     text-transform: capitalize;
+    user-select: none;
 }
 /* header */
 header {
@@ -268,7 +269,7 @@ p.text__heading {
     content: "";
     display: inline-block;
     position: absolute;
-    left: 2.4rem;
+    left: 1.4rem;
     top: 1.4rem;
     opacity: 0.8;
     z-index: 50;
@@ -665,10 +666,12 @@ button {
 footer {
     background-color: var(--primary-Color);
     line-height: 1.6;
+    margin-bottom: 0;
 }
 
 section#footer__inner {
     padding: 4.2rem;
+    margin-bottom: 0;
 }
 
 section#footer__inner h2 {
@@ -686,6 +689,17 @@ section#footer__inner h2 {
     color: var(--white-Color);
     font-size: 1.3rem;
     font-family: "Poppins";
+}
+
+.menu-icons li img {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: block;
+}
+
+.menu-icons li a {
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width:576.98px) {
@@ -821,6 +835,11 @@ section#footer__inner h2 {
     .footer__col {
         width: 100%;
         text-align: center;
+    }
+
+    .title__footer {
+        flex-direction: column;
+        gap: 2.2rem;
     }
 }
 
